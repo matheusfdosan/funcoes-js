@@ -152,7 +152,7 @@ console.log(message())
 
 ## Funções aninhadas / internas
 
-Basicamente, é uma função dentro da outra. São utilizadas quando precisamos executar uma tarefa especifica dentro de uma função.
+Basicamente, é uma função dentro da outra. São utilizadas quando precisamos executar uma tarefa específica em uma função.
 
 > Isso deixa o escopo do código mais organizado e limitado, evitando erros com outras partes do código.
 
@@ -177,7 +177,7 @@ Neste exemplo, a função externa `soma` contém uma função interna `somar`. A
 
 ## Funções Geradoras
 
-As funções geradoras são funções que geram uma fluxo de valores sob demanda, ou seja, um sequência de valores que podem ser consumidos ao longo do tempo.
+As funções geradoras são funções que geram um fluxo de valores sob demanda, ou seja, uma sequência de valores que podem ser consumidos ao longo do tempo.
 
 Com a função geradora, a própria função tem o controle de quando ela quiser retornar alguma coisa. Então, basicamente, quando chamo uma função normal, é necessário um processamento voltado para retornar uma única coisa no final. Logo, com a função geradora, posso ir retornando coisas ao longo do programa, ou seja, é uma maneira de criar sequências de valores que podem ser retornados um por vez, conforme necessário.
 
@@ -208,7 +208,7 @@ console.log(itc.next().value)
 
 ### E se as chamadas passarem do limite?
 
-Agora, se as chamadas das funções passarem do limite, as chamadas seguintes retornarão `undefined`, indicando que não há mais valores a serem consumidos. Mas podemos reiniciar o iterador, por meio da atribuição itc = cores(). Isso cria um novo iterador para a função cores(), que agora pode ser percorrido novamente:
+Agora, se as chamadas das funções passarem do limite, as chamadas seguintes retornarão `undefined`, indicando não haver mais valores a serem consumidos. Mas podemos reiniciar o iterador, por meio da atribuição itc = cores(). Isso cria um novo iterador para a função cores(), que agora pode ser percorrido novamente:
 
 ```js
 function* cores() {
@@ -244,13 +244,13 @@ console.log(itp.next("Matheus").value)
 console.log(itp.next(15).value)
 ```
 
-Na primeira chamada, é impressa a primeira pergunta, que solicita o nome do usuário. Na segunda chamada, é passado o valor "Matheus" como argumento para o método next(), que é recebido como o valor da variável nome.
+Na primeira chamada, é impressa a primeira pergunta, que solicita o nome do usuário. Na segunda chamada, é passado o valor "Matheus" como argumento para o método next(), recebido como o valor da variável nome.
 
 Em seguida, é impressa a segunda string gerada pela função, que solicita a idade do usuário. Na terceira chamada, é passado o valor 15 como argumento para o método next(), que é recebido como o valor da variável idade.
 
 Por fim, é retornada a string que combina as informações do usuário em uma única frase.
 
-### Exemplo de uso: Contador de 0 à 10
+### Exemplo de uso: Contador de 0 a 10
 
 ```js
 function* contador() {
